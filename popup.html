@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CYFARE Reconner</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="app-container">
+            <!-- Header -->
+            <header class="app-header">
+                <h1 class="app-title">CYFARE Reconner</h1>
+                <div class="status-indicator" id="statusIndicator">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Ready</span>
+                </div>
+            </header>
+
+            <!-- Navigation -->
+            <nav class="nav-tabs">
+                <button class="nav-tab active" data-view="scanner">
+                    Scanner
+                </button>
+                <button class="nav-tab" data-view="history">History</button>
+                <button class="nav-tab" data-view="stats">Stats</button>
+                <button class="nav-tab" data-view="analytics">Analytics</button>
+            </nav>
+
+            <!-- Views -->
+            <div class="view-container">
+                <!-- Scanner View -->
+                <div class="view active" id="scannerView">
+                    <div class="scanner-controls">
+                        <button class="btn-primary" id="startBtn">
+                            Start Scan
+                        </button>
+                        <button class="btn-secondary" id="stopBtn" disabled>
+                            Stop
+                        </button>
+                    </div>
+
+                    <div class="progress-section">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-text" id="progressText">0%</div>
+                    </div>
+
+                    <div class="scan-stats">
+                        <div class="stat-card">
+                            <div class="stat-value" id="totalLinks">0</div>
+                            <div class="stat-label">Total Links</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="jsFiles">0</div>
+                            <div class="stat-label">JS Files</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="apiEndpoints">0</div>
+                            <div class="stat-label">API Endpoints</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="parameters">0</div>
+                            <div class="stat-label">Parameters</div>
+                        </div>
+                    </div>
+
+                    <div class="logs-section">
+                        <div class="logs-header">
+                            <h3>Live Logs</h3>
+                            <button class="btn-clear" id="clearLogs">
+                                Clear
+                            </button>
+                        </div>
+                        <div class="logs-container" id="logsContainer"></div>
+                    </div>
+                </div>
+
+                <!-- History View -->
+                <div class="view" id="historyView">
+                    <div class="history-header">
+                        <h2>Scan History</h2>
+                        <button class="btn-secondary" id="clearHistory">
+                            Clear All
+                        </button>
+                    </div>
+                    <div class="history-list" id="historyList"></div>
+                </div>
+
+                <!-- Stats View -->
+                <div class="view" id="statsView">
+                    <div class="stats-header">
+                        <h2>Overall Statistics</h2>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-icon">🔗</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="statsTotal">0</div>
+                                <div class="stat-desc">Total Links Scanned</div>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">📝</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="statsScans">0</div>
+                                <div class="stat-desc">Total Scans</div>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">🔐</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="statsSecrets">
+                                    0
+                                </div>
+                                <div class="stat-desc">Potential Secrets</div>
+                            </div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-icon">🌐</div>
+                            <div class="stat-content">
+                                <div class="stat-number" id="statsDomains">
+                                    0
+                                </div>
+                                <div class="stat-desc">Unique Domains</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Analytics View -->
+                <div class="view" id="analyticsView">
+                    <div class="analytics-header">
+                        <h2>Deep Analytics</h2>
+                    </div>
+                    <div class="analytics-content">
+                        <div class="chart-container">
+                            <h3>Link Type Distribution</h3>
+                            <canvas id="linkTypeChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Domain Analysis</h3>
+                            <canvas id="domainChart"></canvas>
+                        </div>
+                        <div class="insights-container">
+                            <h3>Key Insights</h3>
+                            <div id="insightsList"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
