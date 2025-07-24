@@ -7,10 +7,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/banner.png">
   <br><br><br>
-  <p>
-    <strong>Detect hidden endpoints • Analyze JavaScript for secrets • Track dynamic content • Export findings</strong>
-  </p>
-
   <a href="https://addons.mozilla.org/en-US/firefox/addon/cyfare-reconner/" target="_blank">
     <img src="https://img.shields.io/badge/Install_on-Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Install on Firefox">
   </a>
