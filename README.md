@@ -1,11 +1,9 @@
-<div align="center">
-  <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/banner.png">
-  <br>
   <img src="https://img.shields.io/badge/Firefox-Addon-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Firefox Addon">
   <img src="https://img.shields.io/badge/AI_Powered-Reconnaissance-00D9FF?style=for-the-badge&logo=openai&logoColor=white" alt="AI Powered">
   <img src="https://img.shields.io/badge/Version-1-black?style=for-the-badge&logo=shield&logoColor=white" alt="Version 1">
 
-  <h3>🚀 Advanced Link Reconnaissance Extension for Firefox</h3>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/banner.png">
 
   <p>
     <strong>Detect hidden endpoints • Analyze JavaScript for secrets • Track dynamic content • Export findings</strong>
