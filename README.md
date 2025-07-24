@@ -6,7 +6,7 @@
 <br><br><br>
 <div align="center">
   <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/banner.png">
-
+  <br><br><br>
   <p>
     <strong>Detect hidden endpoints • Analyze JavaScript for secrets • Track dynamic content • Export findings</strong>
   </p>
