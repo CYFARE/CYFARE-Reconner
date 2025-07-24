@@ -117,17 +117,15 @@ The built-in analytics provides:
 
 ## Development Plan
 
-ROADMAP.md
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) and [Development Pipeline](PIPELINE.md)
+- [ROADMAP](https://github.com/CYFARE/CYFARE-Reconner/blob/main/ROADMAP.md)
 
 ## 📝 License
 
 This project is licensed under the GPL Version 3 License - see the [LICENSE](LICENSE) file for details.
 
 ## 🔒 Security
+
+- [SECURITY](https://github.com/CYFARE/CYFARE-Reconner/blob/main/SECURITY.md)
 
 Found a security issue? Please email **security@cyfare.net** instead of using the issue tracker! This extension is 100% secure as per Mozilla extension policy and scanners. You are allowed to perform independent auditing and suggestions under issue tracker.
 
