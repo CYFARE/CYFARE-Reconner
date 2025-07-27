@@ -1,11 +1,11 @@
 <div align="center">
     <img src="https://img.shields.io/badge/Firefox-Addon-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Firefox Addon">
     <img src="https://img.shields.io/badge/AI_Powered-Reconnaissance-00D9FF?style=for-the-badge&logo=openai&logoColor=white" alt="AI Powered">
-    <img src="https://img.shields.io/badge/Version-1-black?style=for-the-badge&logo=shield&logoColor=white" alt="Version 1">
+    <img src="https://img.shields.io/badge/Version-2-black?style=for-the-badge&logo=shield&logoColor=white" alt="Version 2">
 </div>
 <br><br><br>
 <div align="center">
-  <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/banner.png">
+  <img src="https://raw.githubusercontent.com/CYFARE/CYFARE-Reconner/refs/heads/main/Assets/bannerv2.png">
   <br><br><br>
   <a href="https://addons.mozilla.org/en-US/firefox/addon/cyfare-reconner/" target="_blank">
     <img src="https://img.shields.io/badge/Install_on-Firefox-FF7139?style=for-the-badge&logo=firefoxbrowser&logoColor=white" alt="Install on Firefox">
