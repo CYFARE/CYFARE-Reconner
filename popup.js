@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   initializeNavigation();
   initializeControls();
   loadHistory();
-  loadStats();
   initializeCharts();
 });
 
@@ -36,7 +35,6 @@ function initializeNavigation() {
 
       // Load view-specific data
       if (targetView === "history") loadHistory();
-      if (targetView === "stats") loadStats();
       if (targetView === "analytics") updateAnalytics();
     });
   });
@@ -296,33 +294,6 @@ async function saveToHistory() {
   }
 
   await browser.storage.local.set({ scanHistory: historyArray });
-
-  // Update overall stats
-  await updateOverallStats(historyEntry.stats);
-}
-
-// Update Overall Stats
-async function updateOverallStats(newStats) {
-  const storage = await browser.storage.local.get("overallStats");
-  const stats = storage.overallStats || {
-    totalLinks: 0,
-    totalScans: 0,
-    totalSecrets: 0,
-    uniqueDomains: new Set(),
-  };
-
-  stats.totalLinks += newStats.links || 0;
-  stats.totalScans += 1;
-  stats.totalSecrets += newStats.secrets || 0;
-
-  // Add unique domains from current scan
-  if (scanResults.domains && scanResults.domains.size > 0) {
-    const existingDomains = new Set(stats.uniqueDomains);
-    scanResults.domains.forEach((domain) => existingDomains.add(domain));
-    stats.uniqueDomains = Array.from(existingDomains);
-  }
-
-  await browser.storage.local.set({ overallStats: stats });
 }
 
 // Load History
@@ -387,10 +358,10 @@ async function loadHistory() {
     statsDiv.className = "history-stats";
 
     const stats = [
-      `Links: ${item.stats.links}`,
-      `JS: ${item.stats.jsFiles}`,
-      `APIs: ${item.stats.endpoints || 0}`,
-      `Params: ${item.stats.parameters || 0}`,
+      `🔗 Links: ${item.stats.links}`,
+      `📄 JS: ${item.stats.jsFiles}`,
+      `🌐 APIs: ${item.stats.endpoints || 0}`,
+      `🔍 Params: ${item.stats.parameters || 0}`,
     ];
 
     stats.forEach((stat) => {
@@ -485,27 +456,6 @@ function downloadHistoryItem(item) {
   });
 }
 
-// Load Overall Stats
-async function loadStats() {
-  const stats = await browser.storage.local.get("overallStats");
-  const overallStats = stats.overallStats || {
-    totalLinks: 0,
-    totalScans: 0,
-    totalSecrets: 0,
-    uniqueDomains: [],
-  };
-
-  document.getElementById("statsTotal").textContent = overallStats.totalLinks;
-  document.getElementById("statsScans").textContent = overallStats.totalScans;
-  document.getElementById("statsSecrets").textContent =
-    overallStats.totalSecrets;
-  document.getElementById("statsDomains").textContent = Array.isArray(
-    overallStats.uniqueDomains,
-  )
-    ? overallStats.uniqueDomains.length
-    : overallStats.uniqueDomains || 0;
-}
-
 // Initialize Charts (Mock for demo)
 function initializeCharts() {
   // In a real implementation, you would use Chart.js or similar
@@ -530,6 +480,13 @@ async function updateAnalytics() {
   // Get scan history for analytics
   const history = await browser.storage.local.get("scanHistory");
   const historyArray = history.scanHistory || [];
+
+  // Update summary
+  const summaryDiv = document.getElementById("analyticsSummary");
+  summaryDiv.innerHTML = `
+    <span>📊 Total Scans: ${historyArray.length}</span>
+    <span>📅 Last Scan: ${historyArray.length > 0 ? new Date(historyArray[0].date).toLocaleDateString() : "Never"}</span>
+  `;
 
   // Aggregate data for analytics
   const linkTypes = {};

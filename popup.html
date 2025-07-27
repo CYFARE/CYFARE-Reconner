@@ -23,7 +23,6 @@
                     Scanner
                 </button>
                 <button class="nav-tab" data-view="history">History</button>
-                <button class="nav-tab" data-view="stats">Stats</button>
                 <button class="nav-tab" data-view="analytics">Analytics</button>
             </nav>
 
@@ -81,58 +80,25 @@
                 <div class="view" id="historyView">
                     <div class="history-header">
                         <h2>Scan History</h2>
-                        <button class="btn-secondary" id="clearHistory">
+                        <button
+                            class="btn-secondary btn-action"
+                            id="clearHistory"
+                        >
+                            <span>🗑️</span>
                             Clear All
                         </button>
                     </div>
                     <div class="history-list" id="historyList"></div>
                 </div>
 
-                <!-- Stats View -->
-                <div class="view" id="statsView">
-                    <div class="stats-header">
-                        <h2>Overall Statistics</h2>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-box">
-                            <div class="stat-icon">🔗</div>
-                            <div class="stat-content">
-                                <div class="stat-number" id="statsTotal">0</div>
-                                <div class="stat-desc">Total Links Scanned</div>
-                            </div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-icon">📝</div>
-                            <div class="stat-content">
-                                <div class="stat-number" id="statsScans">0</div>
-                                <div class="stat-desc">Total Scans</div>
-                            </div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-icon">🔐</div>
-                            <div class="stat-content">
-                                <div class="stat-number" id="statsSecrets">
-                                    0
-                                </div>
-                                <div class="stat-desc">Potential Secrets</div>
-                            </div>
-                        </div>
-                        <div class="stat-box">
-                            <div class="stat-icon">🌐</div>
-                            <div class="stat-content">
-                                <div class="stat-number" id="statsDomains">
-                                    0
-                                </div>
-                                <div class="stat-desc">Unique Domains</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Analytics View -->
                 <div class="view" id="analyticsView">
                     <div class="analytics-header">
                         <h2>Deep Analytics</h2>
+                        <div
+                            class="analytics-summary"
+                            id="analyticsSummary"
+                        ></div>
                     </div>
                     <div class="analytics-content">
                         <div class="chart-container">
@@ -140,7 +106,7 @@
                             <canvas id="linkTypeChart"></canvas>
                         </div>
                         <div class="chart-container">
-                            <h3>Domain Analysis</h3>
+                            <h3>Top Domains</h3>
                             <canvas id="domainChart"></canvas>
                         </div>
                         <div class="insights-container">

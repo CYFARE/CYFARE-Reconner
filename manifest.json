@@ -1,14 +1,25 @@
 {
   "manifest_version": 2,
   "name": "CYFARE Reconner",
-  "version": "1.0",
+  "version": "2.0",
   "description": "Advanced link reconnaissance tool for web pages",
 
   "permissions": ["activeTab", "tabs", "storage", "downloads", "<all_urls>"],
 
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  },
+
   "browser_action": {
     "default_popup": "popup.html",
-    "default_title": "CYFARE Reconner"
+    "default_title": "CYFARE Reconner",
+    "default_icon": {
+      "16": "icon-16.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    }
   },
 
   "content_scripts": [
