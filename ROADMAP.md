@@ -2,7 +2,16 @@
 
 This document outlines the planned features and improvements for upcoming releases.
 
-## Q4 2025 - Local LLM Integration
+## Q4 2025 - Enhancements
+
+### JS Regex Filter
+- **Goal**: Improve JS regex static filter
+- **Features**:
+  - Better detection for additional secrets
+  - Structure engine to make results better
+  - Enhanced false-positive protection
+
+## Q1 2026 - Local LLM Integration
 
 ### Ollama Support
 - **Goal**: Enable local LLM inference for enhanced privacy and offline operation
@@ -13,7 +22,7 @@ This document outlines the planned features and improvements for upcoming releas
   - Fallback handling when Ollama service is unavailable
 - **Benefits**: Complete privacy, no external API dependencies, customizable models
 
-## Q4 2025 - Enhanced Filtering System
+## Q1 2026 - Enhanced Filtering System
 
 ### Static Filter Improvements
 - **Goal**: Provide more accurate and efficient content filtering
@@ -25,7 +34,7 @@ This document outlines the planned features and improvements for upcoming releas
   - Filter performance metrics and debugging tools
 - **Benefits**: Reduced false positives, faster processing, better coverage
 
-## Q1 2026 - Unified Processing Engine
+## Q2 2026 - Unified Processing Engine
 
 ### Custom Post-Processing Rules
 - **Goal**: Allow users to create sophisticated content transformation workflows
