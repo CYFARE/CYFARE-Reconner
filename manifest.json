@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "CYFARE Reconner",
-  "version": "3.0",
+  "version": "3.0.1",
   "description": "Advanced link reconnaissance tool for web pages",
   "permissions": ["activeTab", "tabs", "storage", "downloads"],
   "host_permissions": ["<all_urls>"],
@@ -32,7 +32,8 @@
   },
   "browser_specific_settings": {
     "gecko": {
-      "id": "reconner@cyfare.com"
+      "id": "{2f3bdbfb-520f-4cef-ab8b-e97785ddf172}",
+      "strict_min_version": "109.0"
     }
   }
 }
